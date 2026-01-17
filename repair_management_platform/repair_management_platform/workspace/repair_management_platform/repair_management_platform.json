@@ -13,14 +13,14 @@
     "label": "Repair Management",
     "links": [
         {
-            "dependencies": [],
+            
             "label": "Operations",
             "link_type": "DocType",
             "on_board": 1,
             "type": "Link"
         },
         {
-            "dependencies": [],
+            
             "is_child_table": 0,
             "label": "Repair Order",
             "link_name": "Repair Order",
@@ -29,7 +29,7 @@
             "type": "Link"
         },
         {
-            "dependencies": [],
+            
             "is_child_table": 0,
             "label": "Repair Device",
             "link_name": "Repair Device",
@@ -38,7 +38,7 @@
             "type": "Link"
         },
         {
-            "dependencies": [],
+            
             "is_child_table": 0,
             "label": "Diagnostic Report",
             "link_name": "Diagnostic Report",
@@ -47,14 +47,14 @@
             "type": "Link"
         },
         {
-            "dependencies": [],
+            
             "label": "Masters",
             "link_type": "DocType",
             "on_board": 0,
             "type": "Link"
         },
         {
-            "dependencies": [],
+            
             "is_child_table": 0,
             "label": "Diagnostic Checklist Template",
             "link_name": "Diagnostic Checklist Template",
@@ -63,14 +63,14 @@
             "type": "Link"
         },
         {
-            "dependencies": [],
+            
             "label": "Customers & Billing",
             "link_type": "DocType",
             "on_board": 0,
             "type": "Link"
         },
         {
-            "dependencies": [],
+            
             "is_child_table": 0,
             "label": "Customer Credit Wallet",
             "link_name": "Customer Credit Wallet",
@@ -79,7 +79,7 @@
             "type": "Link"
         },
         {
-            "dependencies": [],
+            
             "is_child_table": 0,
             "label": "Gift Card",
             "link_name": "Gift Card",
