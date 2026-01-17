@@ -1,6 +1,7 @@
 [
     {
         "doctype": "Diagnostic Checklist Template",
+        "name": "Smartphone Standard Diagnostic",
         "template_name": "Smartphone Standard Diagnostic",
         "industry": "Cell Phone & Wireless Repair",
         "active": 1,
@@ -39,6 +40,7 @@
     },
     {
         "doctype": "Diagnostic Checklist Template",
+        "name": "Bicycle Safety Inspection",
         "template_name": "Bicycle Safety Inspection",
         "industry": "Bike & Bicycle Shops",
         "active": 1,
