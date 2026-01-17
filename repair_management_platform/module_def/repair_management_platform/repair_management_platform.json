@@ -1,0 +1,14 @@
+{
+    "app_name": "repair_management_platform",
+    "creation": "2026-01-17 12:25:00.000000",
+    "docstatus": 0,
+    "doctype": "Module Def",
+    "full_name": "Repair Management Platform",
+    "modified": "2026-01-17 12:25:00.000000",
+    "modified_by": "Administrator",
+    "module_name": "Repair Management Platform",
+    "name": "Repair Management Platform",
+    "owner": "Administrator",
+    "package": "Repair Management Platform",
+    "restrict_to_domain": ""
+}

@@ -1,0 +1,129 @@
+{
+    "charts": [],
+    "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Repair Operations\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Repair Orders\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Repair Devices\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Diagnostic Reports\"}},{\"type\":\"header\",\"data\":{\"text\":\"Settings & Configuration\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Diagnostic Templates\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Checklist Items\"}}]",
+    "creation": "2026-01-17 12:26:00.000000",
+    "docstatus": 0,
+    "doctype": "Workspace",
+    "for_user": "",
+    "hide_custom": 0,
+    "icon": "repair-order",
+    "indicator_color": "blue",
+    "is_default": 0,
+    "is_standard": 1,
+    "label": "Repair Management",
+    "links": [
+        {
+            "dependencies": [],
+            "label": "Operations",
+            "link_type": "DocType",
+            "on_board": 1,
+            "type": "Link"
+        },
+        {
+            "dependencies": [],
+            "is_child_table": 0,
+            "label": "Repair Order",
+            "link_name": "Repair Order",
+            "link_type": "DocType",
+            "on_board": 1,
+            "type": "Link"
+        },
+        {
+            "dependencies": [],
+            "is_child_table": 0,
+            "label": "Repair Device",
+            "link_name": "Repair Device",
+            "link_type": "DocType",
+            "on_board": 1,
+            "type": "Link"
+        },
+        {
+            "dependencies": [],
+            "is_child_table": 0,
+            "label": "Diagnostic Report",
+            "link_name": "Diagnostic Report",
+            "link_type": "DocType",
+            "on_board": 1,
+            "type": "Link"
+        },
+        {
+            "dependencies": [],
+            "label": "Masters",
+            "link_type": "DocType",
+            "on_board": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": [],
+            "is_child_table": 0,
+            "label": "Diagnostic Checklist Template",
+            "link_name": "Diagnostic Checklist Template",
+            "link_type": "DocType",
+            "on_board": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": [],
+            "label": "Customers & Billing",
+            "link_type": "DocType",
+            "on_board": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": [],
+            "is_child_table": 0,
+            "label": "Customer Credit Wallet",
+            "link_name": "Customer Credit Wallet",
+            "link_type": "DocType",
+            "on_board": 0,
+            "type": "Link"
+        },
+        {
+            "dependencies": [],
+            "is_child_table": 0,
+            "label": "Gift Card",
+            "link_name": "Gift Card",
+            "link_type": "DocType",
+            "on_board": 0,
+            "type": "Link"
+        }
+    ],
+    "modified": "2026-01-17 12:26:00.000000",
+    "modified_by": "Administrator",
+    "module": "Repair Management Platform",
+    "name": "Repair Management",
+    "number_cards": [],
+    "owner": "Administrator",
+    "parent_page": "",
+    "public": 1,
+    "quick_lists": [],
+    "roles": [],
+    "sequence_id": 1,
+    "shortcuts": [
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "icon": "file-text",
+            "label": "Repair Orders",
+            "link_to": "Repair Order",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "icon": "device-mobile",
+            "label": "Repair Devices",
+            "link_to": "Repair Device",
+            "type": "DocType"
+        },
+        {
+            "color": "Grey",
+            "doc_view": "List",
+            "icon": "graph",
+            "label": "Diagnostic Reports",
+            "link_to": "Diagnostic Report",
+            "type": "DocType"
+        }
+    ],
+    "title": "Repair Management"
+}

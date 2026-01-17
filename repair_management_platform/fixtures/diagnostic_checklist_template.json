@@ -1,0 +1,73 @@
+[
+    {
+        "doctype": "Diagnostic Checklist Template",
+        "template_name": "Smartphone Standard Diagnostic",
+        "industry": "Cell Phone & Wireless Repair",
+        "active": 1,
+        "items": [
+            {
+                "item_name": "Power On / Boot Up",
+                "category": "Hardware",
+                "mandatory": 1
+            },
+            {
+                "item_name": "Touchscreen Functionality",
+                "category": "Hardware",
+                "mandatory": 1
+            },
+            {
+                "item_name": "Charging Port Test",
+                "category": "Hardware",
+                "mandatory": 1
+            },
+            {
+                "item_name": "WiFi / Bluetooth Signal",
+                "category": "Hardware",
+                "mandatory": 0
+            },
+            {
+                "item_name": "Front & Rear Cameras",
+                "category": "Hardware",
+                "mandatory": 0
+            },
+            {
+                "item_name": "Battery Health Check",
+                "category": "Hardware",
+                "mandatory": 0
+            }
+        ]
+    },
+    {
+        "doctype": "Diagnostic Checklist Template",
+        "template_name": "Bicycle Safety Inspection",
+        "industry": "Bike & Bicycle Shops",
+        "active": 1,
+        "items": [
+            {
+                "item_name": "Brake Pad Wear",
+                "category": "Safety",
+                "mandatory": 1
+            },
+            {
+                "item_name": "Tire Pressure & Integrity",
+                "category": "Safety",
+                "mandatory": 1
+            },
+            {
+                "item_name": "Chain Lubrication & Tension",
+                "category": "Hardware",
+                "mandatory": 0
+            },
+            {
+                "item_name": "Derailleur Alignment",
+                "category": "Hardware",
+                "mandatory": 0
+            },
+            {
+                "item_name": "Frame Cracks Inspection",
+                "category": "Safety",
+                "mandatory": 1
+            }
+        ]
+    }
+]

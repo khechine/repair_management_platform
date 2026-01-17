@@ -1,0 +1,22 @@
+[
+    {
+        "doctype": "Industry Type",
+        "industry_name": "Cell Phone & Wireless Repair"
+    },
+    {
+        "doctype": "Industry Type",
+        "industry_name": "Computer Repair"
+    },
+    {
+        "doctype": "Industry Type",
+        "industry_name": "Bike & Bicycle Shops"
+    },
+    {
+        "doctype": "Industry Type",
+        "industry_name": "Jewelry & Watch Repair"
+    },
+    {
+        "doctype": "Industry Type",
+        "industry_name": "Drone & Camera Repair"
+    }
+]

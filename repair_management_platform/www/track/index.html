@@ -1,0 +1,60 @@
+{% extends "templates/web.html" %}
+
+{% block page_content %}
+<div class="container my-5">
+    <h1 class="text-center mb-4">Track Your Repair</h1>
+    
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <form action="/track" method="GET" class="mb-4">
+                <div class="input-group">
+                    <input type="text" name="q" class="form-control" placeholder="Enter Order ID or Serial/IMEI" value="{{ frappe.form_dict.get('q', '') }}">
+                    <button class="btn btn-primary" type="submit">Track</button>
+                </div>
+            </form>
+
+            {% if error %}
+                <div class="alert alert-warning text-center">
+                    {{ error }}
+                </div>
+            {% endif %}
+
+            {% if repair_order %}
+                <div class="card shadow-sm">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">Repair Status: <span class="badge bg-info text-dark">{{ repair_order.status }}</span></h3>
+                        
+                        <div class="row mb-2">
+                            <div class="col-5 fw-bold">Order ID:</div>
+                            <div class="col-7">{{ repair_order.name }}</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-5 fw-bold">Device:</div>
+                            <div class="col-7">{{ device.device_name }} ({{ device.brand }} {{ device.model }})</div>
+                        </div>
+                        <div class="row mb-2">
+                            <div class="col-5 fw-bold">Serial / IMEI:</div>
+                            <div class="col-7">{{ device.serial_no_imei }}</div>
+                        </div>
+                        {% if repair_order.estimated_completion_date %}
+                        <div class="row mb-2">
+                            <div class="col-5 fw-bold">Estimated Ready:</div>
+                            <div class="col-7 text-success">{{ frappe.format(repair_order.estimated_completion_date, {'fieldtype': 'Date'}) }}</div>
+                        </div>
+                        {% endif %}
+                    </div>
+                </div>
+                
+                <div class="text-center mt-4">
+                    <p class="text-muted small">For any questions, please contact our support team.</p>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+
+<style>
+    .badge { padding: 0.5em 1em; font-size: 0.9rem; }
+    .card { border-radius: 12px; }
+</style>
+{% endblock %}

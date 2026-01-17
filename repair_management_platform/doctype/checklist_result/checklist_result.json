@@ -1,0 +1,63 @@
+{
+    "actions": [],
+    "allow_events_in_timeline": 0,
+    "allow_guest_to_view": 0,
+    "allow_import": 0,
+    "allow_rename": 0,
+    "creation": "2026-01-17 12:17:00.000000",
+    "docstatus": 0,
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "fields": [
+        {
+            "fieldname": "item_name",
+            "fieldtype": "Data",
+            "in_list_view": 1,
+            "label": "Item Name",
+            "read_only": 1
+        },
+        {
+            "fieldname": "status",
+            "fieldtype": "Select",
+            "in_list_view": 1,
+            "label": "Status",
+            "options": "OK\nKO\nN/A",
+            "reqd": 1
+        },
+        {
+            "fieldname": "observation",
+            "fieldtype": "Small Text",
+            "label": "Observation"
+        },
+        {
+            "fieldname": "photo",
+            "fieldtype": "Attach",
+            "label": "Photo"
+        },
+        {
+            "fieldname": "timestamp",
+            "fieldtype": "Datetime",
+            "label": "Timestamp",
+            "read_only": 1
+        },
+        {
+            "fieldname": "mandatory",
+            "fieldtype": "Check",
+            "label": "Mandatory",
+            "read_only": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "istable": 1,
+    "links": [],
+    "modified": "2026-01-17 12:17:00.000000",
+    "modified_by": "Administrator",
+    "module": "Repair Management Platform",
+    "name": "Checklist Result",
+    "owner": "Administrator",
+    "permissions": [],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}

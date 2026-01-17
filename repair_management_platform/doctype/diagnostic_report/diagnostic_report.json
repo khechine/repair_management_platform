@@ -1,0 +1,64 @@
+{
+    "actions": [],
+    "allow_events_in_timeline": 1,
+    "allow_guest_to_view": 0,
+    "allow_import": 1,
+    "allow_rename": 1,
+    "autoname": "format:DIAG-{repair_order}-{###}",
+    "creation": "2026-01-17 12:19:00.000000",
+    "docstatus": 0,
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "fields": [
+        {
+            "fieldname": "repair_order",
+            "fieldtype": "Link",
+            "label": "Repair Order",
+            "options": "Repair Order",
+            "reqd": 1
+        },
+        {
+            "fieldname": "technician",
+            "fieldtype": "Link",
+            "label": "Technician",
+            "options": "Employee"
+        },
+        {
+            "fieldname": "summary",
+            "fieldtype": "Text Editor",
+            "label": "Summary"
+        },
+        {
+            "fieldname": "checklist",
+            "fieldtype": "Link",
+            "label": "Checklist",
+            "options": "Diagnostic Checklist",
+            "read_only": 1
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-01-17 12:19:00.000000",
+    "modified_by": "Administrator",
+    "module": "Repair Management Platform",
+    "name": "Diagnostic Report",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}
