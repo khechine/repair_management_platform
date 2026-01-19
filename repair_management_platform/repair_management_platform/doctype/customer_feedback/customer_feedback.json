@@ -1,0 +1,161 @@
+{
+    "actions": [],
+    "allow_events_in_timeline": 1,
+    "allow_guest_to_view": 1,
+    "allow_import": 0,
+    "allow_rename": 0,
+    "autoname": "naming_series:",
+    "creation": "2026-01-19 10:00:00.000000",
+    "docstatus": 0,
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "fields": [
+        {
+            "fieldname": "naming_series",
+            "fieldtype": "Select",
+            "label": "Naming Series",
+            "options": "FEED-.YYYY.-"
+        },
+        {
+            "fieldname": "repair_order",
+            "fieldtype": "Link",
+            "label": "Repair Order",
+            "options": "Repair Order",
+            "reqd": 1
+        },
+        {
+            "fieldname": "customer",
+            "fieldtype": "Link",
+            "label": "Customer",
+            "options": "Customer",
+            "reqd": 1,
+            "fetch_from": "repair_order.customer"
+        },
+        {
+            "fieldname": "section_break_rating",
+            "fieldtype": "Section Break",
+            "label": "Ratings"
+        },
+        {
+            "fieldname": "overall_rating",
+            "fieldtype": "Rating",
+            "label": "Overall Rating",
+            "reqd": 1
+        },
+        {
+            "fieldname": "column_break_rating",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "service_quality_rating",
+            "fieldtype": "Rating",
+            "label": "Service Quality"
+        },
+        {
+            "fieldname": "section_break_detailed",
+            "fieldtype": "Section Break",
+            "label": "Detailed Ratings"
+        },
+        {
+            "fieldname": "technician_rating",
+            "fieldtype": "Rating",
+            "label": "Technician Rating"
+        },
+        {
+            "fieldname": "column_break_detailed",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "turnaround_time_rating",
+            "fieldtype": "Rating",
+            "label": "Turnaround Time"
+        },
+        {
+            "fieldname": "section_break_price",
+            "fieldtype": "Section Break"
+        },
+        {
+            "fieldname": "price_rating",
+            "fieldtype": "Rating",
+            "label": "Price/Value"
+        },
+        {
+            "fieldname": "column_break_price",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "communication_rating",
+            "fieldtype": "Rating",
+            "label": "Communication"
+        },
+        {
+            "fieldname": "section_break_comments",
+            "fieldtype": "Section Break",
+            "label": "Comments"
+        },
+        {
+            "fieldname": "comments",
+            "fieldtype": "Text",
+            "label": "Comments"
+        },
+        {
+            "fieldname": "would_recommend",
+            "fieldtype": "Check",
+            "label": "Would Recommend to Others"
+        },
+        {
+            "fieldname": "section_break_metadata",
+            "fieldtype": "Section Break",
+            "label": "Metadata"
+        },
+        {
+            "fieldname": "feedback_date",
+            "fieldtype": "Date",
+            "label": "Feedback Date",
+            "default": "Today"
+        },
+        {
+            "fieldname": "column_break_metadata",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "feedback_source",
+            "fieldtype": "Select",
+            "label": "Feedback Source",
+            "options": "Email\nSMS\nPhone\nIn Person\nWeb Portal"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-01-19 10:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Repair Management Platform",
+    "name": "Customer Feedback",
+    "naming_rule": "By \"Naming Series\" field",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        },
+        {
+            "create": 1,
+            "read": 1,
+            "role": "Guest",
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": [],
+    "track_changes": 1
+}

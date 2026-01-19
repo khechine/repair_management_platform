@@ -16,3 +16,11 @@ fixtures = [
     {"doctype": "Industry Type"},
     {"doctype": "Diagnostic Checklist Template"}
 ]
+
+# Document Events
+# ---------------
+doc_events = {
+    "Repair Order": {
+        "on_update": "repair_management_platform.utils.notifications.send_status_notification"
+    }
+}

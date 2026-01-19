@@ -1,0 +1,19 @@
+{
+    "chart_name": "Technician Performance",
+    "chart_type": "Bar",
+    "creation": "2026-01-19 10:00:00.000000",
+    "docstatus": 0,
+    "doctype": "Dashboard Chart",
+    "document_type": "Repair Order",
+    "filters_json": "[[\"Repair Order\",\"status\",\"in\",[\"Completed\"]]]",
+    "based_on": "technician",
+    "group_by_type": "Count",
+    "idx": 0,
+    "is_public": 1,
+    "module": "Repair Management Platform",
+    "name": "Technician Performance",
+    "number_of_groups": 10,
+    "owner": "Administrator",
+    "timespan": "Last Month",
+    "type": "Group By"
+}

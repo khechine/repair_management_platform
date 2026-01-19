@@ -1,0 +1,119 @@
+{
+    "actions": [],
+    "allow_events_in_timeline": 0,
+    "allow_import": 0,
+    "allow_rename": 1,
+    "creation": "2026-01-19 10:00:00.000000",
+    "docstatus": 0,
+    "doctype": "DocType",
+    "editable_grid": 1,
+    "engine": "InnoDB",
+    "fields": [
+        {
+            "fieldname": "sla_name",
+            "fieldtype": "Data",
+            "label": "SLA Name",
+            "reqd": 1,
+            "unique": 1
+        },
+        {
+            "fieldname": "industry",
+            "fieldtype": "Link",
+            "label": "Industry",
+            "options": "Industry Type"
+        },
+        {
+            "fieldname": "priority",
+            "fieldtype": "Select",
+            "label": "Priority",
+            "options": "\nLow\nMedium\nHigh\nUrgent"
+        },
+        {
+            "fieldname": "section_break_targets",
+            "fieldtype": "Section Break",
+            "label": "SLA Targets (Hours)"
+        },
+        {
+            "fieldname": "diagnostic_time_hours",
+            "fieldtype": "Int",
+            "label": "Diagnostic Time (Hours)",
+            "description": "Expected time to complete diagnostic",
+            "default": "24"
+        },
+        {
+            "fieldname": "column_break_targets",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "repair_time_hours",
+            "fieldtype": "Int",
+            "label": "Repair Time (Hours)",
+            "description": "Expected time to complete repair",
+            "default": "48"
+        },
+        {
+            "fieldname": "section_break_response",
+            "fieldtype": "Section Break",
+            "label": "Response Times"
+        },
+        {
+            "fieldname": "response_time_hours",
+            "fieldtype": "Int",
+            "label": "Initial Response Time (Hours)",
+            "description": "Time to acknowledge and start diagnostic",
+            "default": "4"
+        },
+        {
+            "fieldname": "column_break_response",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "quote_time_hours",
+            "fieldtype": "Int",
+            "label": "Quote Delivery Time (Hours)",
+            "description": "Time to provide quote after diagnostic",
+            "default": "12"
+        },
+        {
+            "fieldname": "section_break_status",
+            "fieldtype": "Section Break",
+            "label": "Status"
+        },
+        {
+            "fieldname": "is_active",
+            "fieldtype": "Check",
+            "label": "Is Active",
+            "default": "1"
+        },
+        {
+            "fieldname": "description",
+            "fieldtype": "Text",
+            "label": "Description"
+        }
+    ],
+    "index_web_pages_for_search": 1,
+    "links": [],
+    "modified": "2026-01-19 10:00:00.000000",
+    "modified_by": "Administrator",
+    "module": "Repair Management Platform",
+    "name": "Repair SLA",
+    "naming_rule": "By fieldname",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "export": 1,
+            "print": 1,
+            "read": 1,
+            "report": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}

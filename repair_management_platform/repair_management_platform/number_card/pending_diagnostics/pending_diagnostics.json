@@ -1,0 +1,17 @@
+{
+    "creation": "2026-01-19 10:00:00.000000",
+    "docstatus": 0,
+    "doctype": "Number Card",
+    "document_type": "Repair Order",
+    "filters_json": "[[\"Repair Order\",\"status\",\"in\",[\"Diagnostic Pending\"]]]",
+    "function": "Count",
+    "idx": 0,
+    "is_public": 1,
+    "label": "Pending Diagnostics",
+    "module": "Repair Management Platform",
+    "name": "Pending Diagnostics",
+    "owner": "Administrator",
+    "show_percentage_stats": 1,
+    "stats_time_interval": "Daily",
+    "type": "Document Type"
+}

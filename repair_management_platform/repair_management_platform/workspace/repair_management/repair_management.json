@@ -3,6 +3,22 @@
         {
             "chart_name": "Repairs by Status",
             "label": "Repairs by Status"
+        },
+        {
+            "chart_name": "Revenue by Industry",
+            "label": "Revenue by Industry"
+        },
+        {
+            "chart_name": "Monthly Repair Trends",
+            "label": "Monthly Trends"
+        },
+        {
+            "chart_name": "Technician Performance",
+            "label": "Technician Performance"
+        },
+        {
+            "chart_name": "Repairs by Priority",
+            "label": "Repairs by Priority"
         }
     ],
     "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Repair Management\",\"level\":1,\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Total Active Repairs\",\"col\":4}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Repairs by Status\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Repair Order\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Repair Device\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":4}}]",
@@ -14,6 +30,10 @@
     "is_standard": 1,
     "label": "Repair Management",
     "links": [
+        {
+            "label": "Operations",
+            "type": "Card Break"
+        },
         {
             "label": "Repair Order",
             "link_count": 0,
@@ -29,7 +49,89 @@
             "type": "Link"
         },
         {
+            "label": "Repair Appointment",
+            "link_count": 0,
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "label": "Diagnostics & Quality",
+            "type": "Card Break"
+        },
+        {
+            "label": "Diagnostic Report",
+            "link_count": 0,
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "label": "Diagnostic Checklist",
+            "link_count": 0,
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "label": "Diagnostic Checklist Template",
+            "link_count": 0,
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "label": "Customer Feedback",
+            "link_count": 0,
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "label": "Reports & Analytics",
+            "type": "Card Break"
+        },
+        {
+            "label": "Repair Analytics",
+            "link_count": 0,
+            "link_type": "Report",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "label": "Financial Summary",
+            "link_count": 0,
+            "link_type": "Report",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "label": "Technician Performance",
+            "link_count": 0,
+            "link_type": "Report",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "label": "Masters & Settings",
+            "type": "Card Break"
+        },
+        {
             "label": "Customer",
+            "link_count": 0,
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "label": "Industry Type",
+            "link_count": 0,
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "label": "Repair SLA",
             "link_count": 0,
             "link_type": "DocType",
             "onboard": 0,
@@ -49,6 +151,22 @@
         {
             "label": "Active Repairs",
             "number_card_name": "Total Active Repairs"
+        },
+        {
+            "label": "Monthly Revenue",
+            "number_card_name": "Total Monthly Revenue"
+        },
+        {
+            "label": "Pending Diagnostics",
+            "number_card_name": "Pending Diagnostics"
+        },
+        {
+            "label": "Completed This Month",
+            "number_card_name": "Completed This Month"
+        },
+        {
+            "label": "Avg Repair Time",
+            "number_card_name": "Average Repair Time"
         }
     ],
     "owner": "Administrator",

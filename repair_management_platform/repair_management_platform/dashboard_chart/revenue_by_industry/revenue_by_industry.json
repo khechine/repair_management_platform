@@ -1,0 +1,20 @@
+{
+    "chart_name": "Revenue by Industry",
+    "chart_type": "Bar",
+    "creation": "2026-01-19 10:00:00.000000",
+    "docstatus": 0,
+    "doctype": "Dashboard Chart",
+    "document_type": "Repair Order",
+    "filters_json": "[[\"Repair Order\",\"docstatus\",\"=\",1]]",
+    "based_on": "industry",
+    "value_based_on": "total_amount",
+    "group_by_type": "Sum",
+    "idx": 0,
+    "is_public": 1,
+    "module": "Repair Management Platform",
+    "name": "Revenue by Industry",
+    "number_of_groups": 0,
+    "owner": "Administrator",
+    "timespan": "Last Year",
+    "type": "Group By"
+}

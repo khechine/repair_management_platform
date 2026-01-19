@@ -1,0 +1,17 @@
+{
+    "creation": "2026-01-19 10:00:00.000000",
+    "docstatus": 0,
+    "doctype": "Number Card",
+    "document_type": "Repair Order",
+    "filters_json": "[[\"Repair Order\",\"status\",\"=\",\"Completed\"]]",
+    "function": "Count",
+    "idx": 0,
+    "is_public": 1,
+    "label": "Completed This Month",
+    "module": "Repair Management Platform",
+    "name": "Completed This Month",
+    "owner": "Administrator",
+    "show_percentage_stats": 1,
+    "stats_time_interval": "Monthly",
+    "type": "Document Type"
+}

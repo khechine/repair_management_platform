@@ -1,0 +1,19 @@
+{
+    "chart_name": "Repairs by Priority",
+    "chart_type": "Donut",
+    "creation": "2026-01-19 10:00:00.000000",
+    "docstatus": 0,
+    "doctype": "Dashboard Chart",
+    "document_type": "Repair Order",
+    "filters_json": "[[\"Repair Order\",\"status\",\"not in\",[\"Completed\",\"Cancelled\"]]]",
+    "based_on": "priority",
+    "group_by_type": "Count",
+    "idx": 0,
+    "is_public": 1,
+    "module": "Repair Management Platform",
+    "name": "Repairs by Priority",
+    "number_of_groups": 0,
+    "owner": "Administrator",
+    "timespan": "Last Quarter",
+    "type": "Group By"
+}

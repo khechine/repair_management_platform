@@ -1,0 +1,153 @@
+<div class="print-format" style="font-family: Arial, sans-serif; padding: 20px;">
+    <!-- Header -->
+    <div style="text-align: center; margin-bottom: 30px; border-bottom: 3px solid #333; padding-bottom: 15px;">
+        <h1 style="margin: 0; color: #333;">REPAIR ORDER</h1>
+        <p style="margin: 5px 0; font-size: 14px; color: #666;">{{ doc.name }}</p>
+    </div>
+
+    <!-- Customer and Device Information -->
+    <div style="margin-bottom: 25px;">
+        <table style="width: 100%; border-collapse: collapse;">
+            <tr>
+                <td style="width: 50%; vertical-align: top; padding-right: 20px;">
+                    <h3 style="margin-top: 0; color: #333; border-bottom: 2px solid #333; padding-bottom: 5px;">Customer Information</h3>
+                    <p><strong>Customer:</strong> {{ doc.customer }}</p>
+                    <p><strong>Date:</strong> {{ frappe.utils.formatdate(doc.creation) }}</p>
+                    <p><strong>Service Type:</strong> {{ doc.service_type or 'N/A' }}</p>
+                </td>
+                <td style="width: 50%; vertical-align: top; padding-left: 20px; border-left: 1px solid #ddd;">
+                    <h3 style="margin-top: 0; color: #333; border-bottom: 2px solid #333; padding-bottom: 5px;">Device Information</h3>
+                    {% if doc.device %}
+                        {% set device = frappe.get_doc("Repair Device", doc.device) %}
+                        <p><strong>Device:</strong> {{ device.device_name }}</p>
+                        <p><strong>Brand:</strong> {{ device.brand or 'N/A' }}</p>
+                        <p><strong>Model:</strong> {{ device.model or 'N/A' }}</p>
+                        <p><strong>Serial/IMEI:</strong> {{ device.serial_no_imei or 'N/A' }}</p>
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Repair Details -->
+    <div style="margin-bottom: 25px;">
+        <h3 style="color: #333; border-bottom: 2px solid #333; padding-bottom: 5px;">Repair Details</h3>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 10px;">
+            <tr>
+                <td style="width: 50%; padding: 5px;"><strong>Status:</strong></td>
+                <td style="width: 50%; padding: 5px;">
+                    <span style="padding: 3px 10px; background-color: #e8f5e9; border-radius: 3px; font-weight: bold;">
+                        {{ doc.status }}
+                    </span>
+                </td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="padding: 5px;"><strong>Priority:</strong></td>
+                <td style="padding: 5px;">{{ doc.priority or 'Medium' }}</td>
+            </tr>
+            <tr>
+                <td style="padding: 5px;"><strong>Technician:</strong></td>
+                <td style="padding: 5px;">{{ doc.technician or 'Not Assigned' }}</td>
+            </tr>
+            <tr style="background-color: #f9f9f9;">
+                <td style="padding: 5px;"><strong>Estimated Completion:</strong></td>
+                <td style="padding: 5px;">{{ frappe.utils.formatdate(doc.estimated_completion_date) if doc.estimated_completion_date else 'TBD' }}</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Repair Tasks -->
+    {% if doc.tasks %}
+    <div style="margin-bottom: 25px;">
+        <h3 style="color: #333; border-bottom: 2px solid #333; padding-bottom: 5px;">Repair Tasks</h3>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 10px; border: 1px solid #ddd;">
+            <thead>
+                <tr style="background-color: #333; color: white;">
+                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Description</th>
+                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Status</th>
+                    <th style="padding: 10px; text-align: right; border: 1px solid #ddd;">Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in doc.tasks %}
+                <tr style="{% if loop.index % 2 == 0 %}background-color: #f9f9f9;{% endif %}">
+                    <td style="padding: 8px; border: 1px solid #ddd;">{{ task.description }}</td>
+                    <td style="padding: 8px; border: 1px solid #ddd;">{{ task.status or 'Pending' }}</td>
+                    <td style="padding: 8px; text-align: right; border: 1px solid #ddd;">{{ frappe.utils.fmt_money(task.cost or 0) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+
+    <!-- Spare Parts -->
+    {% if doc.spare_parts %}
+    <div style="margin-bottom: 25px;">
+        <h3 style="color: #333; border-bottom: 2px solid #333; padding-bottom: 5px;">Spare Parts Used</h3>
+        <table style="width: 100%; border-collapse: collapse; margin-top: 10px; border: 1px solid #ddd;">
+            <thead>
+                <tr style="background-color: #333; color: white;">
+                    <th style="padding: 10px; text-align: left; border: 1px solid #ddd;">Item</th>
+                    <th style="padding: 10px; text-align: center; border: 1px solid #ddd;">Quantity</th>
+                    <th style="padding: 10px; text-align: right; border: 1px solid #ddd;">Rate</th>
+                    <th style="padding: 10px; text-align: right; border: 1px solid #ddd;">Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for part in doc.spare_parts %}
+                <tr style="{% if loop.index % 2 == 0 %}background-color: #f9f9f9;{% endif %}">
+                    <td style="padding: 8px; border: 1px solid #ddd;">{{ part.item_code }}</td>
+                    <td style="padding: 8px; text-align: center; border: 1px solid #ddd;">{{ part.qty }}</td>
+                    <td style="padding: 8px; text-align: right; border: 1px solid #ddd;">{{ frappe.utils.fmt_money(part.rate or 0) }}</td>
+                    <td style="padding: 8px; text-align: right; border: 1px solid #ddd;">{{ frappe.utils.fmt_money(part.amount or 0) }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    {% endif %}
+
+    <!-- Total Amount -->
+    <div style="margin-bottom: 25px;">
+        <table style="width: 100%; margin-top: 20px;">
+            <tr>
+                <td style="width: 70%;"></td>
+                <td style="width: 30%; text-align: right; padding: 15px; background-color: #f5f5f5; border: 2px solid #333;">
+                    <h3 style="margin: 0;">Total Amount: {{ frappe.utils.fmt_money(doc.total_amount or 0) }}</h3>
+                    {% if doc.paid_amount %}
+                    <p style="margin: 5px 0 0 0;">Paid: {{ frappe.utils.fmt_money(doc.paid_amount) }}</p>
+                    <p style="margin: 5px 0 0 0; font-weight: bold;">Balance: {{ frappe.utils.fmt_money((doc.total_amount or 0) - (doc.paid_amount or 0)) }}</p>
+                    {% endif %}
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- Notes -->
+    {% if doc.customer_notes %}
+    <div style="margin-bottom: 25px;">
+        <h3 style="color: #333; border-bottom: 2px solid #333; padding-bottom: 5px;">Customer Notes</h3>
+        <p style="padding: 10px; background-color: #f9f9f9; border-left: 4px solid #333;">{{ doc.customer_notes }}</p>
+    </div>
+    {% endif %}
+
+    <!-- Warranty Information -->
+    {% if doc.warranty_expiry_date %}
+    <div style="margin-bottom: 25px;">
+        <p style="padding: 10px; background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 3px;">
+            <strong>Warranty:</strong> This repair is covered under warranty until {{ frappe.utils.formatdate(doc.warranty_expiry_date) }}
+        </p>
+    </div>
+    {% endif %}
+
+    <!-- Footer -->
+    <div style="margin-top: 40px; padding-top: 20px; border-top: 2px solid #333; text-align: center;">
+        <p style="margin: 5px 0; font-size: 12px; color: #666;">
+            Thank you for choosing our repair service!
+        </p>
+        <p style="margin: 5px 0; font-size: 11px; color: #999;">
+            This is a computer-generated document. For inquiries, please contact us.
+        </p>
+    </div>
+</div>

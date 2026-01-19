@@ -69,6 +69,23 @@
             "label": "Estimated Completion Date"
         },
         {
+            "fieldname": "sla",
+            "fieldtype": "Link",
+            "label": "SLA",
+            "options": "Repair SLA"
+        },
+        {
+            "fieldname": "column_break_sla",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "sla_status",
+            "fieldtype": "Select",
+            "label": "SLA Status",
+            "options": "Within SLA\nAt Risk\nBreached",
+            "read_only": 1
+        },
+        {
             "fieldname": "section_break_tasks",
             "fieldtype": "Section Break",
             "label": "Repair Tasks"
@@ -89,6 +106,82 @@
             "fieldtype": "Table",
             "label": "Spare Parts",
             "options": "Repair Spare Part"
+        },
+        {
+            "fieldname": "section_break_financial",
+            "fieldtype": "Section Break",
+            "label": "Financial Information"
+        },
+        {
+            "fieldname": "total_amount",
+            "fieldtype": "Currency",
+            "label": "Total Amount",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_financial",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "paid_amount",
+            "fieldtype": "Currency",
+            "label": "Paid Amount"
+        },
+        {
+            "fieldname": "section_break_timeline",
+            "fieldtype": "Section Break",
+            "label": "Timeline Tracking"
+        },
+        {
+            "fieldname": "actual_completion_date",
+            "fieldtype": "Date",
+            "label": "Actual Completion Date",
+            "read_only": 1
+        },
+        {
+            "fieldname": "column_break_timeline",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "turnaround_time_days",
+            "fieldtype": "Int",
+            "label": "Turnaround Time (Days)",
+            "read_only": 1
+        },
+        {
+            "fieldname": "section_break_additional",
+            "fieldtype": "Section Break",
+            "label": "Additional Information"
+        },
+        {
+            "fieldname": "industry",
+            "fieldtype": "Link",
+            "label": "Industry",
+            "options": "Industry Type"
+        },
+        {
+            "fieldname": "column_break_additional",
+            "fieldtype": "Column Break"
+        },
+        {
+            "fieldname": "warranty_expiry_date",
+            "fieldtype": "Date",
+            "label": "Warranty Expiry Date"
+        },
+        {
+            "fieldname": "section_break_notes",
+            "fieldtype": "Section Break",
+            "label": "Notes"
+        },
+        {
+            "fieldname": "internal_notes",
+            "fieldtype": "Text",
+            "label": "Internal Notes"
+        },
+        {
+            "fieldname": "customer_notes",
+            "fieldtype": "Text",
+            "label": "Customer Notes"
         }
     ],
     "index_web_pages_for_search": 1,

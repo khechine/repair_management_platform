@@ -1,0 +1,18 @@
+{
+    "creation": "2026-01-19 10:00:00.000000",
+    "docstatus": 0,
+    "doctype": "Number Card",
+    "document_type": "Repair Order",
+    "filters_json": "[[\"Repair Order\",\"status\",\"=\",\"Completed\"]]",
+    "function": "Average",
+    "aggregate_function_based_on": "turnaround_time_days",
+    "idx": 0,
+    "is_public": 1,
+    "label": "Avg Repair Time (Days)",
+    "module": "Repair Management Platform",
+    "name": "Average Repair Time",
+    "owner": "Administrator",
+    "show_percentage_stats": 1,
+    "stats_time_interval": "Monthly",
+    "type": "Document Type"
+}
