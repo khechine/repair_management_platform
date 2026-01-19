@@ -1,0 +1,53 @@
+{
+    "actions": [],
+    "allow_rename": 1,
+    "creation": "2024-05-21 15:30:00.000000",
+    "doctype": "DocType",
+    "engine": "InnoDB",
+    "field_order": [
+        "default_warehouse",
+        "default_service_item",
+        "terms_and_conditions"
+    ],
+    "fields": [
+        {
+            "fieldname": "default_warehouse",
+            "fieldtype": "Link",
+            "label": "Default Warehouse",
+            "options": "Warehouse"
+        },
+        {
+            "fieldname": "default_service_item",
+            "fieldtype": "Link",
+            "label": "Default Service Item",
+            "options": "Item"
+        },
+        {
+            "fieldname": "terms_and_conditions",
+            "fieldtype": "Text Editor",
+            "label": "Terms & Conditions"
+        }
+    ],
+    "issingle": 1,
+    "links": [],
+    "modified": "2024-05-21 15:30:00.000000",
+    "modified_by": "Administrator",
+    "module": "Repair Management Platform",
+    "name": "Repair Management Settings",
+    "owner": "Administrator",
+    "permissions": [
+        {
+            "create": 1,
+            "delete": 1,
+            "email": 1,
+            "print": 1,
+            "read": 1,
+            "role": "System Manager",
+            "share": 1,
+            "write": 1
+        }
+    ],
+    "sort_field": "modified",
+    "sort_order": "DESC",
+    "states": []
+}

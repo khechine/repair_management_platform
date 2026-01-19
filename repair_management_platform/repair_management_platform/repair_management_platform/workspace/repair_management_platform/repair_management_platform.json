@@ -1,6 +1,6 @@
 {
     "charts": [],
-    "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Repair Operations\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Repair Orders\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Repair Devices\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Diagnostic Reports\"}},{\"type\":\"header\",\"data\":{\"text\":\"Settings & Configuration\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Diagnostic Templates\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Checklist Items\"}}]",
+    "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Repair Operations\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Repair Orders\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Repair Devices\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Repair Appointments\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Repair Tasks\"}},{\"type\":\"header\",\"data\":{\"text\":\"Diagnostics & Tech\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Diagnostic Reports\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Checklists\"}},{\"type\":\"header\",\"data\":{\"text\":\"Inventory & Masters\",\"level\":2}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Repair Spare Parts\"}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Industry Types\"}}]",
     "creation": "2026-01-17 12:26:00.000000",
     "docstatus": 0,
     "doctype": "Workspace",
@@ -13,14 +13,12 @@
     "label": "Repair Management",
     "links": [
         {
-            
             "label": "Operations",
             "link_type": "DocType",
             "on_board": 1,
             "type": "Link"
         },
         {
-            
             "is_child_table": 0,
             "label": "Repair Order",
             "link_name": "Repair Order",
@@ -29,7 +27,14 @@
             "type": "Link"
         },
         {
-            
+            "is_child_table": 0,
+            "label": "Repair Appointment",
+            "link_name": "Repair Appointment",
+            "link_type": "DocType",
+            "on_board": 1,
+            "type": "Link"
+        },
+        {
             "is_child_table": 0,
             "label": "Repair Device",
             "link_name": "Repair Device",
@@ -38,7 +43,20 @@
             "type": "Link"
         },
         {
-            
+            "is_child_table": 0,
+            "label": "Repair Task",
+            "link_name": "Repair Task",
+            "link_type": "DocType",
+            "on_board": 1,
+            "type": "Link"
+        },
+        {
+            "label": "Diagnostics",
+            "link_type": "DocType",
+            "on_board": 1,
+            "type": "Link"
+        },
+        {
             "is_child_table": 0,
             "label": "Diagnostic Report",
             "link_name": "Diagnostic Report",
@@ -47,44 +65,69 @@
             "type": "Link"
         },
         {
-            
-            "label": "Masters",
+            "is_child_table": 0,
+            "label": "Diagnostic Checklist",
+            "link_name": "Diagnostic Checklist",
             "link_type": "DocType",
-            "on_board": 0,
+            "on_board": 1,
             "type": "Link"
         },
         {
-            
+            "label": "Stock & Parts",
+            "link_type": "DocType",
+            "on_board": 1,
+            "type": "Link"
+        },
+        {
+            "is_child_table": 0,
+            "label": "Repair Spare Part",
+            "link_name": "Repair Spare Part",
+            "link_type": "DocType",
+            "on_board": 1,
+            "type": "Link"
+        },
+        {
+            "label": "Masters",
+            "link_type": "DocType",
+            "on_board": 1,
+            "type": "Link"
+        },
+        {
+            "is_child_table": 0,
+            "label": "Industry Type",
+            "link_name": "Industry Type",
+            "link_type": "DocType",
+            "on_board": 1,
+            "type": "Link"
+        },
+        {
             "is_child_table": 0,
             "label": "Diagnostic Checklist Template",
             "link_name": "Diagnostic Checklist Template",
             "link_type": "DocType",
-            "on_board": 0,
+            "on_board": 1,
             "type": "Link"
         },
         {
-            
             "label": "Customers & Billing",
             "link_type": "DocType",
-            "on_board": 0,
+            "on_board": 1,
             "type": "Link"
         },
         {
-            
             "is_child_table": 0,
             "label": "Customer Credit Wallet",
             "link_name": "Customer Credit Wallet",
             "link_type": "DocType",
-            "on_board": 0,
+            "on_board": 1,
             "type": "Link"
         },
         {
-            
             "is_child_table": 0,
             "label": "Gift Card",
             "link_name": "Gift Card",
             "link_type": "DocType",
-            "on_board": 0,
+            "on_board": 1,
             "type": "Link"
         }
     ],
@@ -92,16 +135,10 @@
     "modified_by": "Administrator",
     "module": "Repair Management Platform",
     "name": "Repair Management",
-    "number_cards": [],
-    "owner": "Administrator",
-    "parent_page": "",
     "public": 1,
-    "quick_lists": [],
-    "roles": [],
-    "sequence_id": 1,
     "shortcuts": [
         {
-            "color": "Grey",
+            "color": "Blue",
             "doc_view": "List",
             "icon": "file-text",
             "label": "Repair Orders",
@@ -109,7 +146,7 @@
             "type": "DocType"
         },
         {
-            "color": "Grey",
+            "color": "Green",
             "doc_view": "List",
             "icon": "device-mobile",
             "label": "Repair Devices",
@@ -117,11 +154,35 @@
             "type": "DocType"
         },
         {
-            "color": "Grey",
+            "color": "Orange",
+            "doc_view": "List",
+            "icon": "calendar",
+            "label": "Repair Appointments",
+            "link_to": "Repair Appointment",
+            "type": "DocType"
+        },
+        {
+            "color": "Red",
+            "doc_view": "List",
+            "icon": "check-square",
+            "label": "Repair Tasks",
+            "link_to": "Repair Task",
+            "type": "DocType"
+        },
+        {
+            "color": "Purple",
             "doc_view": "List",
             "icon": "graph",
             "label": "Diagnostic Reports",
             "link_to": "Diagnostic Report",
+            "type": "DocType"
+        },
+        {
+            "color": "Yellow",
+            "doc_view": "List",
+            "icon": "box",
+            "label": "Repair Spare Parts",
+            "link_to": "Repair Spare Part",
             "type": "DocType"
         }
     ],

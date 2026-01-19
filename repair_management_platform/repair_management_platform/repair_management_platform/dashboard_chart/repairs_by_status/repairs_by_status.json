@@ -1,0 +1,18 @@
+{
+    "based_on": "status",
+    "chart_name": "Repairs by Status",
+    "chart_type": "Donut",
+    "creation": "2024-05-21 16:00:00.000000",
+    "docstatus": 0,
+    "doctype": "Dashboard Chart",
+    "document_type": "Repair Order",
+    "group_by_type": "Count",
+    "idx": 0,
+    "is_public": 1,
+    "module": "Repair Management Platform",
+    "name": "Repairs by Status",
+    "number_ of_groups": 0,
+    "owner": "Administrator",
+    "timespan": "Last Year",
+    "type": "Group By"
+}

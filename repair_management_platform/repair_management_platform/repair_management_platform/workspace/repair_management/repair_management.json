@@ -1,0 +1,89 @@
+{
+    "charts": [
+        {
+            "chart_name": "Repairs by Status",
+            "label": "Repairs by Status"
+        }
+    ],
+    "content": "[{\"type\":\"header\",\"data\":{\"text\":\"Repair Management\",\"level\":1,\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Total Active Repairs\",\"col\":4}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Repairs by Status\",\"col\":12}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Repair Order\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Repair Device\",\"col\":4}},{\"type\":\"shortcut\",\"data\":{\"shortcut_name\":\"Customer\",\"col\":4}}]",
+    "creation": "2024-05-21 16:10:00.000000",
+    "docstatus": 0,
+    "doctype": "Workspace",
+    "icon": "tool",
+    "idx": 0,
+    "is_standard": 1,
+    "label": "Repair Management",
+    "links": [
+        {
+            "label": "Repair Order",
+            "link_count": 0,
+            "link_type": "DocType",
+            "onboard": 1,
+            "type": "Link"
+        },
+        {
+            "label": "Repair Device",
+            "link_count": 0,
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "label": "Customer",
+            "link_count": 0,
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        },
+        {
+            "label": "Repair Management Settings",
+            "link_count": 0,
+            "link_type": "DocType",
+            "onboard": 0,
+            "type": "Link"
+        }
+    ],
+    "module": "Repair Management Platform",
+    "name": "Repair Management",
+    "number_cards": [
+        {
+            "label": "Active Repairs",
+            "number_card_name": "Total Active Repairs"
+        }
+    ],
+    "owner": "Administrator",
+    "public": 1,
+    "roles": [
+        {
+            "role": "System Manager"
+        },
+        {
+            "role": "GSM Technician"
+        },
+        {
+            "role": "GSM Receptionist"
+        }
+    ],
+    "sequence_id": 1,
+    "shortcuts": [
+        {
+            "doc_view": "List",
+            "label": "Repair Order",
+            "link_to": "Repair Order",
+            "type": "DocType"
+        },
+        {
+            "doc_view": "List",
+            "label": "Repair Device",
+            "link_to": "Repair Device",
+            "type": "DocType"
+        },
+        {
+            "doc_view": "List",
+            "label": "Customer",
+            "link_to": "Customer",
+            "type": "DocType"
+        }
+    ],
+    "title": "Repair Management"
+}
